@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box /* correcteur de paddings - https://developer.mozilla.org/fr/docs/Web/CSS/box-sizing */
+}
+
+html{
+	  font-size: 62.5%; /* Ré-équilibrage du Rem face au Pixel pour des calculs simples - 62.5% de 16px (taille par défault des tous les navigateurs) = 10px :-). 
+	  On garde ce font-size toujours en pourcentage, car si l'utilisateur a changé le paramétre de son navigateur (le cas des mal-voyants, par exemple) et a augmenté la taille de la police par défaut, on le respecte */
+	}
+
+body {
+  font-size:1.6rem; /* Cependant 10px est trop petit pour une taille de police, du coup on remet les choses dans l'ordre - 16px. Les margins et paddings vont être calculés à partir de 10px, car ils se baseront sur l'info de la balise <html> mais la taille du texte va se baser sur le <body> */	
+}
+img {
+	max-width:100% /*correcteur de taille d'image : "ne dépasse pas ta propre taille ni la taille de ton parent" */
+	}
+section, article {
+  padding: 1.5em;
+  border: 1px solid grey;
+}
+section {
+  display: flex;
+  flex-wrap: wrap /* on permet une passage à la ligne, au cas où il n'a plus de place */
+}
+h1 {
+	text-transform : uppercase; /*Google est case-sensible, on évite de se faire référencer en majuscule */
+	text-align:center;
+	flex-basis:100%; /* on le met à 100% et il n'est plus concerné par le flex (à la condition d'avoir mis flex-wrap dans le parent) */
+}
+section article {
+	/*flex: 1  /* mais eux restent concernés. Et pas que, leur taille est désormais automatisée (si j'ajoute un 4ème article, ils s'ajousteront pour faire de la place) */
+  flex-basis:30%
+}
+
+.cta /*call to action*/{
+  background:gray;
+  padding: 10px 30px; /* jamais height, toujours padding pour grossir ou augmenter la taille des elements, ça améliore l'évolutivité du site car permet des passages à la ligne*/
+  text-decoration:none;
+  color:#000
+}
+
+.container {
+  max-width:1000px; 
+  margin: 0 auto;
+}
+
