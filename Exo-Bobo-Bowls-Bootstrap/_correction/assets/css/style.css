@@ -1,0 +1,65 @@
+/*----- GLOBAL -----*/
+*{box-sizing:border-box}
+html{font-size:62.5%}
+body{
+	font-size: 1.6rem;
+}
+a:hover{text-decoration:none}
+img {max-width: 100%;}
+header a, h1{
+	font-family: 'Comfortaa', cursive;
+}
+h1 {
+    font-size: 3.1rem;
+    flex-basis: 100%;
+    margin: 0px 0 2rem 15px;
+}
+
+
+/*----- HEADER -----*/
+header{
+	background: url(../img/header.jpg) no-repeat center top;
+	background-size: cover;
+	margin-bottom: 4rem;
+	text-align:center;
+	font-size: 3.33em;
+	text-shadow: 2px 3px black;
+}
+header a, header a:hover{
+	color: #fff;
+}
+header a{
+	padding : 8rem 0;
+	display:block;
+}
+
+
+
+/*----- MAIN -----*/
+main {
+	display:flex;    
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+#base {
+    display: flex;
+    flex-wrap: wrap;
+}
+h1 span{
+	font-size: smaller;
+	color: #28A845;
+}
+.card.text-center{
+	cursor: pointer;
+}
+h3.card-text {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.card{
+	margin-bottom: 15px;
+}
+.selected{
+	background-color: #28A845;
+	color: white;
+}
